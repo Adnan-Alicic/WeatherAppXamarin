@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.MainPage"
+             
+             BackgroundImageSource="background.jpg">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+            
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="Lokacija" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="2" Text="{Binding lokacija}" VerticalOptions="EndAndExpand" HorizontalOptions="Center" IsVisible="True" HorizontalTextAlignment="Center" FontSize="30" FontAttributes="Bold" Margin="0,0,0,10"></Label>
+        
+        <Label x:Name="Langitude" Text="{Binding latitude}" IsVisible="false" HorizontalOptions="Center" FontSize="30" TextColor="Transparent" ></Label>
+        <Label x:Name="Longitude" Text="{Binding longitude}" HorizontalOptions="Center" FontSize="30" FontAttributes="Bold"  TextColor="Transparent"></Label>
+
+        <Label x:Name="opis" Grid.Row="2" Grid.Column="0" Grid.RowSpan="2" Grid.ColumnSpan="5" HorizontalTextAlignment="Center" VerticalOptions="Center"  FontSize="30" FontAttributes="Bold" TextColor="White" ></Label>
+        <Label x:Name="temperatura" Grid.Row="3" Grid.Column="0"  Grid.ColumnSpan="5" Grid.RowSpan="2" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="56" FontAttributes="Bold" TextColor="White"></Label>
+
+        <BoxView Grid.Row="5" Grid.RowSpan="9" BackgroundColor="Black" Grid.ColumnSpan="5" Opacity=".3" Margin="0,20,0,0"></BoxView>
+        <Label x:Name="osjecaj" Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="2" VerticalOptions="Center" HorizontalOptions="Start" FontSize="17" TextColor="White"></Label>
+        <Image Grid.Row="6" Grid.Column="0" x:Name="osjecajtemp" Source="emoticons.png" Scale="0.6" HorizontalOptions="EndAndExpand" ></Image>
+
+        <Label x:Name="maksimalna" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="4" VerticalOptions="Center"  FontSize="17" TextColor="White" ></Label>
+        <Image Grid.Row="7" Grid.Column="0" x:Name="maksimalnatemp" Source="hightemp.png" Scale="0.6" HorizontalOptions="EndAndExpand" ></Image>
+
+        <Label x:Name="minimalna" Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="4" FontSize="17" VerticalOptions="Center" TextColor="White"></Label>
+        <Image Grid.Row="8" Grid.Column="0" x:Name="minimalnatemp" Source="lowTemperature.png" Scale="0.6" HorizontalOptions="EndAndExpand" ></Image>
+
+        <Label x:Name="pritisak" Grid.Row="9" Grid.Column="1" Grid.ColumnSpan="3" FontSize="17" VerticalOptions="Center" TextColor="White"></Label>
+        <Image Grid.Row="9" Grid.Column="0" x:Name="pritisaktemp" Source="pressure.png" Scale="0.6" HorizontalOptions="EndAndExpand"  ></Image>
+
+        <Label x:Name="vlaznost" Grid.Row="10" Grid.Column="1" Grid.ColumnSpan="2" FontSize="17" VerticalOptions="Center"  TextColor="White"></Label>
+        <Image Grid.Row="10" Grid.Column="0" x:Name="vlaznosttemp" Source="humidity.png" Scale="0.6"  HorizontalOptions="EndAndExpand"></Image>
+
+
+        <Button x:Name="FtoC" Text="°C" BackgroundColor="DarkBlue" BorderColor="CornflowerBlue" BorderWidth="4" HorizontalOptions="EndAndExpand" Margin="-5,0,0,0" TextColor="White" Grid.Column="4" Grid.Row="12"></Button>
+        <Button x:Name="CtoF" Text="F" BackgroundColor="DarkBlue" BorderColor="CornflowerBlue" BorderWidth="4"  HorizontalOptions="StartAndExpand" Margin="0,0,-5,0" TextColor="White" Grid.Column="3" Grid.Row="12"></Button>
+
+     
+
+        <Label x:Name="notFound"></Label>
+
+        <Label x:Name="mjesto" Grid.Row="4" Text=""></Label>
+
+    </Grid>
+</ContentPage>

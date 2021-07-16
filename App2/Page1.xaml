@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App2.Page1"
+              BackgroundImageSource="background.jpg">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2.8*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="50"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Row="0" x:Name="image1" Grid.RowSpan="2" Source="weatherLocation.png" Grid.ColumnSpan="5" Scale="1.5" ></Image>
+        <Entry Grid.Row="2" Grid.Column="1" x:Name="locationEntry" Placeholder="Enter your location" ReturnType="Search"  TextColor="Black" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" BackgroundColor="Transparent" Margin="10" ></Entry>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="submit" Text="submit" Clicked="submit_Clicked" CornerRadius="20" Scale=".8" ScaleY=".8" BackgroundColor="#404652" TextColor="White" Grid.ColumnSpan="2" FontSize="24"></Button>
+        <Label Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="5"  Text="weatherforecast"  VerticalOptions="End" HorizontalOptions="Center" FontSize="20" Opacity=".8" x:Name="_koordinate"></Label>
+        <ImageButton Clicked="Button_Clicked" Source="locat.png" BackgroundColor="Transparent" Scale="0.7" Grid.Row="3" Grid.Column="3" VerticalOptions="Start" Margin="0,5,0,7"></ImageButton>
+
+
+    </Grid>
+
+
+
+
+</ContentPage>
